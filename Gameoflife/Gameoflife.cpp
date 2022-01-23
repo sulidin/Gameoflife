@@ -23,9 +23,7 @@ int main()
     Life configuration;
     instructions();
     configuration.initialize();
-    //configuration.print();
-    //cout << "Continue viewing new generations? \n";
-    //while (user_says_yes()) {
+
     int n = 0;
     while (n<20) {
         configuration.update();
@@ -36,7 +34,7 @@ int main()
                 n = 0;
             }
         }
-        Sleep(500);
+        Sleep(300);
     }
     
 

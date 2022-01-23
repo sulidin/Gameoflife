@@ -28,7 +28,7 @@ void Life::initialize()
     cout << "Please enter number of cells you would like to start\n";
     cin >> tot;
     cout << "List " << tot << " coordinates for living cells in 'x y' format.\n";
-    //cout << "Terminate the list with the special pair -1 -1\n";
+
     cin >> row >> col;
     for (int i = 0; i < tot - 1 ; i++) {
         if (row > 1 && row <= maxrow)
@@ -42,11 +42,6 @@ void Life::initialize()
     }
 
 }
-void clearScreen(int lenght) {
-    for (int i = 0; i < lenght; i++) {
-        cout << "\b";
-    }
-}
 
 
 void Life::print()
@@ -57,11 +52,11 @@ void Life::print()
  */
 {
     int row, col;
-   // cout << "\nThe current Life configuration is: \n";
+
     for (row = 1; row <= maxrow; row++) {
         for (col = 1; col <= maxcol; col++)
             if (grid[row][col] == 1) cout << "*";
-            else cout << ' '; //CHANGED TO EMPTY
+            else cout << ' '; 
         cout << "\n";
     }
     cout << "\n";
